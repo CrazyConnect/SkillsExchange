@@ -10,8 +10,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4",
-    "jquery": "~1.11.2",
-    "angular": "~1.4.0"
+    "sb-admin-angular": "git://github.com/start-angular/sb-admin-angular.git"
   }
 }
