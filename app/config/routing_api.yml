@@ -3,6 +3,16 @@ app_user:
         alias: app.user
     type: sylius.resource_api
 
+app_current_user_show:
+    path: /user
+    methods: [GET]
+    defaults:
+        _controller: app.controller.user:showAction
+        _format: json
+        _sylius:
+            criteria: {id: 'expr:service("security.context").getToken().getUser().getId()'}
+
+
 app_service_product:
     resource: |
         alias: app.service_product

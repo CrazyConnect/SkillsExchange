@@ -13,8 +13,14 @@ angular
         'ui.router',
         'ui.bootstrap',
         'angular-loading-bar',
-        'app-api'
+        'app-api',
+        'Auth'
     ])
+    .run(['Auth', 'currentUserService', function run(Auth, currentUserService) {
+
+        var _user = currentUserService.get();
+        Auth.set(_user);
+    }])
     .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
         $ocLazyLoadProvider.config({
@@ -142,4 +148,29 @@ angular
             })
     }]);
 
-    
+angular.module('Auth', [
+        'ngCookies'
+    ])
+    .factory('Auth', ['$cookieStore', function ($cookieStore) {
+
+        var _user = {};
+
+        return {
+
+            user: _user,
+
+            set: function (_user) {
+                var existing_cookie_user = $cookieStore.get('current.user');
+                if (existing_cookie_user) {
+                    _user = existing_cookie_user;
+                }
+                $cookieStore.put('current.user', _user);
+            },
+
+            remove: function () {
+                $cookieStore.remove('current.user', _user);
+            }
+        };
+    }])
+;
+

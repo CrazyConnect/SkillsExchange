@@ -75,6 +75,30 @@ function ServiceService(apiClientService) {
 }
 
 angular.module('app-api')
+    .factory('currentUserService', currentCustomerService);
+
+currentCustomerService.$inject = ['apiClientService'];
+
+function currentCustomerService(apiClientService) {
+
+    var endPoint = 'api/user';
+
+    var service = {
+        get: get
+    };
+
+    return service;
+
+    /////////
+
+    function get() {
+        return apiClientService.show(endPoint);
+    }
+}
+
+
+
+angular.module('app-api')
     .factory('apiClientService', ApiClientService);
 
 ApiClientService.$inject = ['Restangular'];
