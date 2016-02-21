@@ -12,6 +12,16 @@ app_current_user_show:
         _sylius:
             criteria: {id: 'expr:service("security.context").getToken().getUser().getId()'}
 
+app_current_user_booking_index:
+    path: /user/bookings/
+    methods: [GET]
+    defaults:
+        _controller: app.controller.booking:indexAction
+        _format: json
+        _sylius:
+            paginate: $limit
+            criteria: { user: 'expr:service("security.context").getToken().getUser().getId()' }
+            sortable: true
 
 app_service_product:
     resource: |

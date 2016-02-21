@@ -1,0 +1,5 @@
+AppBundle\Entity\Booking:
+    booking{1..25}:
+        startDate: <dateTimeBetween('now', '+7 days')>
+        user: @user
+        service: @service*
