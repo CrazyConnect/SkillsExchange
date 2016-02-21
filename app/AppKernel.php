@@ -8,6 +8,18 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new Bazinga\Bundle\HateoasBundle\BazingaHateoasBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Sylius\Bundle\ProductBundle\SyliusProductBundle(),
+            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
+            new Sylius\Bundle\ArchetypeBundle\SyliusArchetypeBundle(),
+            new Sylius\Bundle\AttributeBundle\SyliusAttributeBundle(),
+            new Sylius\Bundle\VariationBundle\SyliusVariationBundle(),
+            new Sylius\Bundle\TranslationBundle\SyliusTranslationBundle(),
+
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),

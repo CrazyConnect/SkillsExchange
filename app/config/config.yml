@@ -65,3 +65,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+sylius_translation:
+    default_locale: %locale%
+
+sylius_archetype:
+    resources:
+        product:
+            subject: Sylius\Component\Product\Model\Product
+            attribute: Sylius\Component\Product\Model\Attribute
+            option: Sylius\Component\Product\Model\Option
+
+sylius_product:
+    driver: doctrine/orm
