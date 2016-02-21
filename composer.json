@@ -30,7 +30,9 @@
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
         "symfony/phpunit-bridge": "~2.7",
-        "bruli/php-git-hooks": "~2.0"
+        "bruli/php-git-hooks": "~2.0",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "hautelook/alice-bundle": "^1.2"
     },
     "scripts": {
         "post-install-cmd": [

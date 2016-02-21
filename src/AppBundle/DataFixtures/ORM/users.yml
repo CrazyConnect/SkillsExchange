@@ -1,0 +1,7 @@
+AppBundle\Entity\User:
+    user:
+        Username: user
+        PlainPassword: user
+        Email: test@example.com
+        Enabled: true
+        Roles: [ROLE_USER]
