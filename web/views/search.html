@@ -5,7 +5,24 @@
 </div>
 <!-- /.row -->
 <div class="row">
-
-
+    <div ng-repeat="service in vm.services">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4><strong>{{ service.user.username }}</strong> propose <strong>{{ service.description }}</strong></h4></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" class="thumbnail">
+                                <img src="http://placehold.it/150x150" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            {{ service.price }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /.row -->
