@@ -1,0 +1,4 @@
+app_user:
+    resource: |
+        alias: app.user
+    type: sylius.resource_api
