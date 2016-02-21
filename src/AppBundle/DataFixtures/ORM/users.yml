@@ -2,6 +2,17 @@ AppBundle\Entity\User:
     user:
         Username: user
         PlainPassword: user
-        Email: test@example.com
+        Email(unique): <safeEmail()>
         Enabled: true
+        Roles: [ROLE_USER]
+    john:
+        Username: john
+        PlainPassword: john
+        Email(unique): <safeEmail()>
+        Enabled: true
+        Roles: [ROLE_USER]
+    user{1..25}:
+        Username(unique): <firstname()>
+        PlainPassword: user
+        Email(unique): <safeEmail()>
         Roles: [ROLE_USER]

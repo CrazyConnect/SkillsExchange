@@ -2,5 +2,15 @@ AppBundle\Entity\ServiceProduct:
     english_lesson:
         Duration: 20
         Price: 15
-        Description: lesson
-        User: @user
+        Description: English Lesson
+        User: @john
+    cleaning:
+        Duration: 20
+        Price: 15
+        Description: Cleaning
+        User: @john
+    service{1..25}:
+        Duration: 20
+        Price: 15
+        Description: <catchPhrase()>
+        User: @user*
