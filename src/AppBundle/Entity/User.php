@@ -18,9 +18,24 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="ServiceProduct", mappedBy="user", cascade="all")
+     */
+    protected $services;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    public function getServices()
+    {
+        return $this->services;
+    }
+
+    public function setServices($services)
+    {
+        $this->services = $services;
     }
 }

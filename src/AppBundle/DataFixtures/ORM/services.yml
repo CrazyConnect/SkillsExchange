@@ -1,0 +1,6 @@
+AppBundle\Entity\ServiceProduct:
+    english_lesson:
+        Duration: 20
+        Price: 15
+        Description: lesson
+        User: @user

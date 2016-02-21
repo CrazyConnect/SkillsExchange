@@ -4,7 +4,10 @@ sylius_resource:
             driver: doctrine/orm
             classes:
                 model: AppBundle\Entity\User
-
+        app.service_product:
+            driver: doctrine/orm
+            classes:
+                model: AppBundle\Entity\ServiceProduct
 
 fos_rest:
     disable_csrf_role: ROLE_API

@@ -2,3 +2,8 @@ app_user:
     resource: |
         alias: app.user
     type: sylius.resource_api
+
+app_service_product:
+    resource: |
+        alias: app.service_product
+    type: sylius.resource_api
