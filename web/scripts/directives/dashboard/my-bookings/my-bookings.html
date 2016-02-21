@@ -1,0 +1,5 @@
+<accordion close-others="true">
+    <accordion-group heading="{{booking.service.user.username}} - {{booking.start_date | date:'mediumDate'}}" ng-repeat="booking in vm.bookings | orderBy: 'start_date'">
+        {{booking.service.description}}
+    </accordion-group>
+</accordion>

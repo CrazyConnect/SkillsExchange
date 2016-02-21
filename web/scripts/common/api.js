@@ -75,16 +75,17 @@ function ServiceService(apiClientService) {
 }
 
 angular.module('app-api')
-    .factory('currentUserService', currentCustomerService);
+    .factory('currentUserService', CurrentUserService);
 
-currentCustomerService.$inject = ['apiClientService'];
+CurrentUserService.$inject = ['apiClientService'];
 
-function currentCustomerService(apiClientService) {
+function CurrentUserService(apiClientService) {
 
     var endPoint = 'api/user';
 
     var service = {
-        get: get
+        get: get,
+        getBookingList: getBookingList
     };
 
     return service;
@@ -93,6 +94,10 @@ function currentCustomerService(apiClientService) {
 
     function get() {
         return apiClientService.show(endPoint);
+    }
+
+    function getBookingList() {
+        return apiClientService.index(endPoint + '/bookings');
     }
 }
 

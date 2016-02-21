@@ -5,38 +5,16 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
-    <!-- /.row -->
-    <div class="row">
-        <stats number="2" comments="Services" colour="red" type="user"></stats>
-        <stats number="3" comments="Bookings" colour="yellow" type="shopping-cart"></stats>
-        <stats number="12" comments="New messages!" colour="primary" type="comments"></stats>
-    </div>
     
     <!-- /.panel -->
     <div class="row">
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bell fa-fw"></i> Your Booking
+                    <i class="fa fa-bell fa-fw"></i> Service you will receive
                 </div>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#today-booking" data-toggle="tab">Today</a>
-                    </li>
-                    <li><a href="#tomorrow-booking" data-toggle="tab">Tomorrow</a>
-                    </li>
-                    <li><a href="#future-booking" data-toggle="tab">Future</a>
-                    </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="today-booking">
-                    </div>
-                    <div class="tab-pane fade" id="tomorrow-booking">
-                    </div>
-                    <div class="tab-pane fade" id="future-booking">
-                    </div>
-                </div>
+                <my-bookings prestationMode="false">
+                </my-bookings>
             </div>
             <!-- /.panel -->
 
@@ -45,25 +23,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-bell fa-fw"></i> Booking from Client
-                </div>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#today-service" data-toggle="tab">Today</a>
-                    </li>
-                    <li><a href="#tomorrow-service" data-toggle="tab">Tomorrow</a>
-                    </li>
-                    <li><a href="#future-service" data-toggle="tab">Future</a>
-                    </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="today-service">
-                    </div>
-                    <div class="tab-pane fade" id="tomorrow-service">
-                    </div>
-                    <div class="tab-pane fade" id="future-service">
-                    </div>
+                    <i class="fa fa-bell fa-fw"></i> Service you have to give
                 </div>
             </div>
 
