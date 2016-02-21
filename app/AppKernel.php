@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Sylius\Bundle\VariationBundle\SyliusVariationBundle(),
             new Sylius\Bundle\TranslationBundle\SyliusTranslationBundle(),
 
+            new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),

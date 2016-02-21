@@ -24,7 +24,8 @@
         "sylius/resource-bundle": "^0.16.0",
         "Sylius/user-bundle": "^0.16.0",
         "Sylius/product-bundle": "^0.16.0",
-        "Sylius/archetype-bundle": "^0.16.0"
+        "Sylius/archetype-bundle": "^0.16.0",
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
